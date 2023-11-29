@@ -14,18 +14,18 @@ class TimeCalculator:
         self.colour = 'WHITE'
 
     def get_user_input_dates(self):
-        start_date_str = input("Enter the starting date (YYYY-MM-DD): ")
-        end_date_str = input("Enter the ending date (YYYY-MM-DD): ")
-        self.starting_date = datetime.strptime(start_date_str, "%Y-%m-%d")
-        self.ending_date = datetime.strptime(end_date_str, "%Y-%m-%d")
+        start_date_str = input("Enter the starting date (DD-MM-YYYY): ")
+        end_date_str = input("Enter the ending date (DD-MM-YYYY): ")
+        self.starting_date = datetime.strptime(start_date_str, "%d-%m-%Y")
+        self.ending_date = datetime.strptime(end_date_str, "%d-%m-%Y")
 
     def get_user_input_starting_date(self):
-        start_date_str = input("Enter the starting date (YYYY-MM-DD): ")
-        self.starting_date = datetime.strptime(start_date_str, "%Y-%m-%d")
+        start_date_str = input("Enter the starting date (DD-MM-YYYY): ")
+        self.starting_date = datetime.strptime(start_date_str, "%d-%m-%Y")
 
     def get_user_input_end_date(self):
-        end_date_str = input("Enter the ending date (YYYY-MM-DD): ")
-        self.ending_date = datetime.strptime(end_date_str, "%Y-%m-%d")
+        end_date_str = input("Enter the ending date (DD-MM-YYYY): ")
+        self.ending_date = datetime.strptime(end_date_str, "%d-%m-%Y")
 
     def get_user_input_hours(self):
         self.required_hours = int(input("Enter the required hours: "))

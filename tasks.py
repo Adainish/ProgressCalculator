@@ -8,11 +8,11 @@ import timeframe
 def calculate(ctx, start_date=None, end_date=None, total_hours=None, hours_per_day=None, progress_target=None, colour=None):
     timeframe_calc = timeframe.TimeCalculator()
     if start_date is not None:
-        timeframe_calc.starting_date = datetime.strptime(start_date, "%Y-%m-%d")
+        timeframe_calc.starting_date = datetime.strptime(start_date, "%d-%m-%Y")
     else:
         timeframe_calc.get_user_input_starting_date()
     if end_date is not None:
-        timeframe_calc.ending_date = datetime.strptime(end_date, "%Y-%m-%d")
+        timeframe_calc.ending_date = datetime.strptime(end_date, "%d-%m-%Y")
     else:
         timeframe_calc.get_user_input_end_date()
     if total_hours is not None:
